@@ -36,4 +36,8 @@ public class Produto implements Cloneable {
     public void setPreco(float preco) {
         this.preco = preco;
     }
+
+    public String toString(){
+        return this.marca+" "+this.descricao+" ("+this.preco+")";
+    }
 }

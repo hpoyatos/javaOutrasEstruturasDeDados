@@ -1,8 +1,9 @@
 import java.util.HashSet;
+import java.util.HashMap;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        HashSetExemplo2();
+        HashMapExemplo1();
     }
 
     public static void HashSetExemplo1() {
@@ -49,10 +50,22 @@ public class App {
         } catch (Exception e) {
             // TODO: handle exception
         }
-
-        
-
-        
-
     }  
+
+    public static void HashMapExemplo1() {
+        Produto oProdXbox = new Produto("Microsoft", "Xbox Series X 1tb Standard Cor Preto", 3890f);
+        
+        HashMap<String, Produto> catalogoComChave = new HashMap<String, Produto>();
+        System.out.println(catalogoComChave.put("xboxChurrasqueira", oProdXbox));
+
+        System.out.println("Produtos na coleção: "+catalogoComChave.size());
+
+        System.out.println(catalogoComChave.get("xboxChurrasqueira"));
+
+
+
+
+        
+
+    }
 }
