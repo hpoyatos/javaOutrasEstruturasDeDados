@@ -1,4 +1,4 @@
-public class Produto {
+public class Produto implements Cloneable {
     private String marca;
     private String descricao;
     private float preco;
@@ -7,6 +7,10 @@ public class Produto {
         this.marca = marca;
         this.descricao = descricao;
         this.preco = preco;
+    }
+
+    public Object clone() throws CloneNotSupportedException{
+        return super.clone();
     }
 
     public String getMarca() {
@@ -32,6 +36,4 @@ public class Produto {
     public void setPreco(float preco) {
         this.preco = preco;
     }
-
-    
 }
